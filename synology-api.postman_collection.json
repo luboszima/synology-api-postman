@@ -1,0 +1,816 @@
+{
+	"info": {
+		"_postman_id": "e3064975-0481-4c84-b9bb-b5f506030ca4",
+		"name": "synology-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39418026"
+	},
+	"item": [
+		{
+			"name": "docker",
+			"item": [
+				{
+					"name": "logs",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-SYNO-TOKEN",
+										"value": "{{SYNO_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "api",
+											"value": "SYNO.Docker.Log",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "list",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "action",
+											"value": "\"load\"",
+											"type": "text"
+										},
+										{
+											"key": "offset",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "limit",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "sort_by",
+											"value": "\"time\"",
+											"type": "text"
+										},
+										{
+											"key": "sort_dir",
+											"value": "\"DESC\"",
+											"type": "text"
+										},
+										{
+											"key": "loglevel",
+											"value": "\"\"",
+											"type": "text"
+										},
+										{
+											"key": "filter_content",
+											"value": "\"\"",
+											"type": "text"
+										},
+										{
+											"key": "datefrom",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "dateto",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Log",
+									"host": [
+										"{{SYNO_URL}}"
+									],
+									"path": [
+										"webapi",
+										"entry.cgi",
+										"SYNO.Docker.Log"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "list",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-SYNO-TOKEN",
+												"value": "{{SYNO_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "api",
+													"value": "SYNO.Docker.Log",
+													"type": "text"
+												},
+												{
+													"key": "method",
+													"value": "list",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "action",
+													"value": "\"load\"",
+													"type": "text"
+												},
+												{
+													"key": "offset",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "limit",
+													"value": "1000",
+													"type": "text"
+												},
+												{
+													"key": "sort_by",
+													"value": "\"time\"",
+													"type": "text"
+												},
+												{
+													"key": "sort_dir",
+													"value": "\"DESC\"",
+													"type": "text"
+												},
+												{
+													"key": "loglevel",
+													"value": "\"\"",
+													"type": "text"
+												},
+												{
+													"key": "filter_content",
+													"value": "\"\"",
+													"type": "text"
+												},
+												{
+													"key": "datefrom",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "dateto",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Log",
+											"host": [
+												"{{SYNO_URL}}"
+											],
+											"path": [
+												"webapi",
+												"entry.cgi",
+												"SYNO.Docker.Log"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date"
+										}
+									],
+									"body": "{\n    \"data\": {\n        \"error_count\": 0,\n        \"info_count\": 0,\n        \"limit\": 0,\n        \"logs\": [],\n        \"offset\": 0,\n        \"total\": 0,\n        \"warn_count\": 0\n    },\n    \"success\": true\n}"
+								},
+								{
+									"name": "docker_log Copy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-SYNO-TOKEN",
+												"value": "{{SYNO_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "api",
+													"value": "SYNO.Docker.Log",
+													"type": "text"
+												},
+												{
+													"key": "method",
+													"value": "list",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "action",
+													"value": "\"load\"",
+													"type": "text"
+												},
+												{
+													"key": "offset",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "limit",
+													"value": "1000",
+													"type": "text"
+												},
+												{
+													"key": "sort_by",
+													"value": "\"time\"",
+													"type": "text"
+												},
+												{
+													"key": "sort_dir",
+													"value": "\"DESC\"",
+													"type": "text"
+												},
+												{
+													"key": "loglevel",
+													"value": "\"\"",
+													"type": "text"
+												},
+												{
+													"key": "filter_content",
+													"value": "\"\"",
+													"type": "text"
+												},
+												{
+													"key": "datefrom",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "dateto",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Log",
+											"host": [
+												"{{SYNO_URL}}"
+											],
+											"path": [
+												"webapi",
+												"entry.cgi",
+												"SYNO.Docker.Log"
+											]
+										}
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date"
+										}
+									],
+									"body": "{\n    \"data\": {\n        \"error_count\": 0,\n        \"info_count\": 0,\n        \"limit\": 0,\n        \"logs\": [],\n        \"offset\": 0,\n        \"total\": 0,\n        \"warn_count\": 0\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "clear",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-SYNO-TOKEN",
+										"value": "{{SYNO_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "api",
+											"value": "SYNO.Docker.Log",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "clear",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Log",
+									"host": [
+										"{{SYNO_URL}}"
+									],
+									"path": [
+										"webapi",
+										"entry.cgi",
+										"SYNO.Docker.Log"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "clear",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-SYNO-TOKEN",
+												"value": "{{SYNO_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "api",
+													"value": "SYNO.Docker.Log",
+													"type": "text"
+												},
+												{
+													"key": "method",
+													"value": "clear",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Log",
+											"host": [
+												"{{SYNO_URL}}"
+											],
+											"path": [
+												"webapi",
+												"entry.cgi",
+												"SYNO.Docker.Log"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 26 Jun 2025 08:22:39 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=\"UTF-8\""
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=20"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "id=dfQbyI9V7HTEhBOh_g_WlbQdem8Wap3-rdr3y_v6eCwGbTLGosmqQCglVJ7xvttg-QCXvmufvp91v9ZFabhJN8;expires=Thu, 03-Jul-2025 08:22:39 GMT;max-age=604800;path=/;HttpOnly"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, no-cache, no-store, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15768000; includeSubdomains; preload"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {},\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "export",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-SYNO-TOKEN",
+										"value": "{{SYNO_TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Log?api=SYNO.Docker.Log&method=export&version=1&format=\"html\"&loglevel=\"\"&filter_content=\"\"&datefrom=0&dateto=0&SynoToken={{SYNO_TOKEN}}",
+									"host": [
+										"{{SYNO_URL}}"
+									],
+									"path": [
+										"webapi",
+										"entry.cgi",
+										"SYNO.Docker.Log"
+									],
+									"query": [
+										{
+											"key": "api",
+											"value": "SYNO.Docker.Log"
+										},
+										{
+											"key": "method",
+											"value": "export"
+										},
+										{
+											"key": "version",
+											"value": "1"
+										},
+										{
+											"key": "format",
+											"value": "\"html\""
+										},
+										{
+											"key": "loglevel",
+											"value": "\"\""
+										},
+										{
+											"key": "filter_content",
+											"value": "\"\""
+										},
+										{
+											"key": "datefrom",
+											"value": "0"
+										},
+										{
+											"key": "dateto",
+											"value": "0"
+										},
+										{
+											"key": "SynoToken",
+											"value": "{{SYNO_TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "export",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-SYNO-TOKEN",
+												"value": "{{SYNO_TOKEN}}",
+												"type": "text"
+											},
+											{
+												"key": "",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Log?api=SYNO.Docker.Log&method=export&version=1&format=\"html\"&loglevel=\"\"&filter_content=\"\"&datefrom=0&dateto=0&SynoToken={{SYNO_TOKEN}}",
+											"host": [
+												"{{SYNO_URL}}"
+											],
+											"path": [
+												"webapi",
+												"entry.cgi",
+												"SYNO.Docker.Log"
+											],
+											"query": [
+												{
+													"key": "api",
+													"value": "SYNO.Docker.Log"
+												},
+												{
+													"key": "method",
+													"value": "export"
+												},
+												{
+													"key": "version",
+													"value": "1"
+												},
+												{
+													"key": "format",
+													"value": "\"html\""
+												},
+												{
+													"key": "loglevel",
+													"value": "\"\""
+												},
+												{
+													"key": "filter_content",
+													"value": "\"\""
+												},
+												{
+													"key": "datefrom",
+													"value": "0"
+												},
+												{
+													"key": "dateto",
+													"value": "0"
+												},
+												{
+													"key": "SynoToken",
+													"value": "{{SYNO_TOKEN}}"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 26 Jun 2025 08:29:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=20"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Content-Disposition",
+											"value": "attachment; filename=\"docker_log.html\""
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15768000; includeSubdomains; preload"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n        <style>h2{text-align:center;}table{width:95%;border-collapse:collapse;}table,th,td{border:1px solid black;}td{white-space:nowrap;text-align:left;}</style>\n    </head>\n    <body>\n        <h2></h2>\n        <table>\n            <tr>\n                <th>Level</th>\n                <th>Time</th>\n                <th>User</th>\n                <th>Event</th>\n            </tr>\n            <tr>\n                <td>Information</td>\n                <td>2025/06/26&nbsp;15:29:08</td>\n                <td>devops</td>\n                <td>Stop&nbsp;project&nbsp;'glance'&nbsp;successfully.</td>\n            </tr>\n            <tr>\n                <td>Information</td>\n                <td>2025/06/26&nbsp;15:29:14</td>\n                <td>devops</td>\n                <td>Start&nbsp;project&nbsp;'glance'&nbsp;successfully.</td>\n            </tr>\n        </table>\n    </body>\n</html>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "1. retrive APIs info",
+					"protocolProfileBehavior": {
+						"protocolVersion": "auto"
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SYNO_URL}}/webapi/entry.cgi?api=SYNO.API.Info&version=1&method=query",
+							"host": [
+								"{{SYNO_URL}}"
+							],
+							"path": [
+								"webapi",
+								"entry.cgi"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "SYNO.API.Info"
+								},
+								{
+									"key": "version",
+									"value": "1"
+								},
+								{
+									"key": "method",
+									"value": "query"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. get syno api token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var synotoken = pm.response.json().data.synotoken;",
+									"var synosid = pm.response.json().data.sid;",
+									"pm.collectionVariables.set(\"SYNO_TOKEN\", synotoken);",
+									"console.log(\"SYNO_TOKEN\", synotoken);",
+									"",
+									"pm.collectionVariables.set(\"SYNO_SID\", synosid);",
+									"console.log(\"SYNO_SID\", synosid);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"protocolVersion": "auto"
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{SYNO_URL}}/webapi/entry.cgi?api=SYNO.API.Auth&version=6&method=login&account={{SYNO_USERNAME}}&passwd={{SYNO_PASSWORD}}&enable_syno_token=yes&format=si",
+							"host": [
+								"{{SYNO_URL}}"
+							],
+							"path": [
+								"webapi",
+								"entry.cgi"
+							],
+							"query": [
+								{
+									"key": "api",
+									"value": "SYNO.API.Auth"
+								},
+								{
+									"key": "version",
+									"value": "6"
+								},
+								{
+									"key": "method",
+									"value": "login"
+								},
+								{
+									"key": "account",
+									"value": "{{SYNO_USERNAME}}"
+								},
+								{
+									"key": "passwd",
+									"value": "{{SYNO_PASSWORD}}"
+								},
+								{
+									"key": "enable_syno_token",
+									"value": "yes"
+								},
+								{
+									"key": "format",
+									"value": "si"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SYNO_URL",
+			"value": "your_url_or_ip_to_synology_nas",
+			"type": "string"
+		},
+		{
+			"key": "SYNO_USERNAME",
+			"value": "your_username",
+			"type": "string"
+		},
+		{
+			"key": "SYNO_PASSWORD",
+			"value": "your_password",
+			"type": "string"
+		},
+		{
+			"key": "SYNO_TOKEN",
+			"value": "will_be_stored_from_2_request",
+			"type": "string"
+		},
+		{
+			"key": "SYNO_SID",
+			"value": "will_be_stored_from_2_request"
+		}
+	]
+}
