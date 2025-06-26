@@ -5,6 +5,12 @@ Postman collection for Synology API
 
 Here is documentation https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-data/
 
+## Initial Setup
+
+When you import the collection, you will need to set up the collection variables.
+![initial setup](/imgs/postman_collection_init_steps.png)
+
+
 ## Current APIs in collection
 
 ### SYNO.Docker.Log
@@ -50,7 +56,7 @@ Clear the event logs.
 }
 ```
 
-### export
+#### export
 
 Export the event logs in HTML or CSV format.
 
