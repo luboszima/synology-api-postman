@@ -10,7 +10,7 @@
 			"name": "docker",
 			"item": [
 				{
-					"name": "logs",
+					"name": "log",
 					"item": [
 						{
 							"name": "list",
@@ -103,110 +103,6 @@
 							"response": [
 								{
 									"name": "list",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "X-SYNO-TOKEN",
-												"value": "{{SYNO_TOKEN}}",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "api",
-													"value": "SYNO.Docker.Log",
-													"type": "text"
-												},
-												{
-													"key": "method",
-													"value": "list",
-													"type": "text"
-												},
-												{
-													"key": "version",
-													"value": "1",
-													"type": "text"
-												},
-												{
-													"key": "action",
-													"value": "\"load\"",
-													"type": "text"
-												},
-												{
-													"key": "offset",
-													"value": "0",
-													"type": "text"
-												},
-												{
-													"key": "limit",
-													"value": "1000",
-													"type": "text"
-												},
-												{
-													"key": "sort_by",
-													"value": "\"time\"",
-													"type": "text"
-												},
-												{
-													"key": "sort_dir",
-													"value": "\"DESC\"",
-													"type": "text"
-												},
-												{
-													"key": "loglevel",
-													"value": "\"\"",
-													"type": "text"
-												},
-												{
-													"key": "filter_content",
-													"value": "\"\"",
-													"type": "text"
-												},
-												{
-													"key": "datefrom",
-													"value": "0",
-													"type": "text"
-												},
-												{
-													"key": "dateto",
-													"value": "0",
-													"type": "text"
-												}
-											]
-										},
-										"url": {
-											"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Log",
-											"host": [
-												"{{SYNO_URL}}"
-											],
-											"path": [
-												"webapi",
-												"entry.cgi",
-												"SYNO.Docker.Log"
-											]
-										}
-									},
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json",
-											"description": "",
-											"type": "text"
-										}
-									],
-									"cookie": [
-										{
-											"expires": "Invalid Date"
-										}
-									],
-									"body": "{\n    \"data\": {\n        \"error_count\": 0,\n        \"info_count\": 0,\n        \"limit\": 0,\n        \"logs\": [],\n        \"offset\": 0,\n        \"total\": 0,\n        \"warn_count\": 0\n    },\n    \"success\": true\n}"
-								},
-								{
-									"name": "docker_log Copy",
 									"originalRequest": {
 										"method": "POST",
 										"header": [
@@ -648,6 +544,667 @@
 									],
 									"cookie": [],
 									"body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n        <style>h2{text-align:center;}table{width:95%;border-collapse:collapse;}table,th,td{border:1px solid black;}td{white-space:nowrap;text-align:left;}</style>\n    </head>\n    <body>\n        <h2></h2>\n        <table>\n            <tr>\n                <th>Level</th>\n                <th>Time</th>\n                <th>User</th>\n                <th>Event</th>\n            </tr>\n            <tr>\n                <td>Information</td>\n                <td>2025/06/26&nbsp;15:29:08</td>\n                <td>devops</td>\n                <td>Stop&nbsp;project&nbsp;'glance'&nbsp;successfully.</td>\n            </tr>\n            <tr>\n                <td>Information</td>\n                <td>2025/06/26&nbsp;15:29:14</td>\n                <td>devops</td>\n                <td>Start&nbsp;project&nbsp;'glance'&nbsp;successfully.</td>\n            </tr>\n        </table>\n    </body>\n</html>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "project",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-SYNO-TOKEN",
+										"value": "{{SYNO_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "api",
+											"value": "SYNO.Docker.Project",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "list",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Project",
+									"host": [
+										"{{SYNO_URL}}"
+									],
+									"path": [
+										"webapi",
+										"entry.cgi",
+										"SYNO.Docker.Project"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-SYNO-TOKEN",
+										"value": "{{SYNO_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "api",
+											"value": "SYNO.Docker.Project",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "get",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "\"187b2816-fd6c-4f87-b178-6d94806c7404\"",
+											"description": "mandatory: ID of Project from Container Manager.",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Project",
+									"host": [
+										"{{SYNO_URL}}"
+									],
+									"path": [
+										"webapi",
+										"entry.cgi",
+										"SYNO.Docker.Project"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-SYNO-TOKEN",
+												"value": "{{SYNO_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "api",
+													"value": "SYNO.Docker.Project",
+													"type": "text"
+												},
+												{
+													"key": "method",
+													"value": "get",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "id",
+													"value": "\"3c091e8b-f68f-4161-97a3-fc3db3f4bdc9\"",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Project",
+											"host": [
+												"{{SYNO_URL}}"
+											],
+											"path": [
+												"webapi",
+												"entry.cgi",
+												"SYNO.Docker.Project"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 26 Jun 2025 13:36:55 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=\"UTF-8\""
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=20"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "id=dfQbyI9V7HTEhBOh_g_WlbQdem8Wap3-rdr3y_v6eCwGbTLGosmqQCglVJ7xvttg-QCXvmufvp91v9ZFabhJN8;expires=Thu, 03-Jul-2025 13:36:55 GMT;max-age=604800;path=/;HttpOnly"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, no-cache, no-store, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15768000; includeSubdomains; preload"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date"
+										}
+									],
+									"body": "{\n    \"data\": {\n        \"containerIds\": [\n            \"c7244062cf6e45cf20d37ec606ea2af86880bd57013625a4059cdd9c173db2fb\"\n        ],\n        \"containers\": [\n            {\n                \"AppArmorProfile\": \"docker-default\",\n                \"Args\": [\n                    \"--config\",\n                    \"/app/config/glance.yml\"\n                ],\n                \"Config\": {\n                    \"AttachStderr\": true,\n                    \"AttachStdin\": false,\n                    \"AttachStdout\": true,\n                    \"Cmd\": null,\n                    \"Domainname\": \"\",\n                    \"Entrypoint\": [\n                        \"/app/glance\",\n                        \"--config\",\n                        \"/app/config/glance.yml\"\n                    ],\n                    \"Env\": [\n                        \"MY_SECRET_TOKEN=secret\",\n                        \"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n                    ],\n                    \"ExposedPorts\": {\n                        \"8080/tcp\": {}\n                    },\n                    \"Healthcheck\": {\n                        \"Interval\": 60000000000,\n                        \"StartPeriod\": 60000000000,\n                        \"Test\": [\n                            \"CMD-SHELL\",\n                            \"wget --spider -q http://localhost:8080/api/healthz\"\n                        ],\n                        \"Timeout\": 10000000000\n                    },\n                    \"Hostname\": \"c7244062cf6e\",\n                    \"Image\": \"glanceapp/glance\",\n                    \"Labels\": {\n                        \"com.docker.compose.config-hash\": \"6e6c0c153757022a1236c29ebbf60945fb2350503875637755f73954e44bc938\",\n                        \"com.docker.compose.container-number\": \"1\",\n                        \"com.docker.compose.depends_on\": \"\",\n                        \"com.docker.compose.image\": \"sha256:5711e63eb8de0264bb81c3a046bb5172c543965530479d1cde9d5d9c1b170365\",\n                        \"com.docker.compose.oneoff\": \"False\",\n                        \"com.docker.compose.project\": \"glance\",\n                        \"com.docker.compose.project.config_files\": \"/volume1/docker/glance/compose.yaml\",\n                        \"com.docker.compose.project.working_dir\": \"/volume1/docker/glance\",\n                        \"com.docker.compose.replace\": \"9b6a7325fa374736d604cb269796d0c2959807c4409837bdb346537b518bd99d\",\n                        \"com.docker.compose.service\": \"glance\",\n                        \"com.docker.compose.version\": \"2.20.1\",\n                        \"tsdproxy.container_port\": \"8080\",\n                        \"tsdproxy.dash.icon\": \"si/portainer\",\n                        \"tsdproxy.dash.label\": \"Glance\",\n                        \"tsdproxy.enable\": \"true\",\n                        \"tsdproxy.ephemeral\": \"true\",\n                        \"tsdproxy.name\": \"glance-prod\"\n                    },\n                    \"OnBuild\": null,\n                    \"OpenStdin\": false,\n                    \"StdinOnce\": false,\n                    \"Tty\": false,\n                    \"User\": \"\",\n                    \"Volumes\": null,\n                    \"WorkingDir\": \"/app\"\n                },\n                \"Created\": \"2025-06-23T14:25:17.317309291Z\",\n                \"Driver\": \"btrfs\",\n                \"ExecIDs\": null,\n                \"GraphDriver\": {\n                    \"Data\": null,\n                    \"Name\": \"btrfs\"\n                },\n                \"HostConfig\": {\n                    \"AutoRemove\": false,\n                    \"Binds\": [\n                        \"/volume1/docker/glance/config:/app/config:rw\"\n                    ],\n                    \"BlkioDeviceReadBps\": null,\n                    \"BlkioDeviceReadIOps\": null,\n                    \"BlkioDeviceWriteBps\": null,\n                    \"BlkioDeviceWriteIOps\": null,\n                    \"BlkioWeight\": 0,\n                    \"BlkioWeightDevice\": null,\n                    \"CapAdd\": null,\n                    \"CapDrop\": null,\n                    \"Cgroup\": \"\",\n                    \"CgroupParent\": \"\",\n                    \"CgroupnsMode\": \"host\",\n                    \"ConsoleSize\": [\n                        0,\n                        0\n                    ],\n                    \"ContainerIDFile\": \"\",\n                    \"CpuCount\": 0,\n                    \"CpuPercent\": 0,\n                    \"CpuPeriod\": 0,\n                    \"CpuQuota\": 0,\n                    \"CpuRealtimePeriod\": 0,\n                    \"CpuRealtimeRuntime\": 0,\n                    \"CpuShares\": 0,\n                    \"CpusetCpus\": \"\",\n                    \"CpusetMems\": \"\",\n                    \"DeviceCgroupRules\": null,\n                    \"DeviceRequests\": null,\n                    \"Devices\": null,\n                    \"Dns\": [],\n                    \"DnsOptions\": [],\n                    \"DnsSearch\": [],\n                    \"ExtraHosts\": [],\n                    \"GroupAdd\": null,\n                    \"IOMaximumBandwidth\": 0,\n                    \"IOMaximumIOps\": 0,\n                    \"IpcMode\": \"private\",\n                    \"Isolation\": \"\",\n                    \"Links\": null,\n                    \"LogConfig\": {\n                        \"Config\": {},\n                        \"Type\": \"db\"\n                    },\n                    \"MaskedPaths\": [\n                        \"/proc/asound\",\n                        \"/proc/acpi\",\n                        \"/proc/kcore\",\n                        \"/proc/keys\",\n                        \"/proc/latency_stats\",\n                        \"/proc/timer_list\",\n                        \"/proc/timer_stats\",\n                        \"/proc/sched_debug\",\n                        \"/proc/scsi\",\n                        \"/sys/firmware\"\n                    ],\n                    \"Memory\": 0,\n                    \"MemoryReservation\": 0,\n                    \"MemorySwap\": 0,\n                    \"MemorySwappiness\": null,\n                    \"NanoCpus\": 0,\n                    \"NetworkMode\": \"glance_default\",\n                    \"OomKillDisable\": false,\n                    \"OomScoreAdj\": 0,\n                    \"PidMode\": \"\",\n                    \"PidsLimit\": null,\n                    \"PortBindings\": {},\n                    \"Privileged\": false,\n                    \"PublishAllPorts\": false,\n                    \"ReadonlyPaths\": [\n                        \"/proc/bus\",\n                        \"/proc/fs\",\n                        \"/proc/irq\",\n                        \"/proc/sys\",\n                        \"/proc/sysrq-trigger\"\n                    ],\n                    \"ReadonlyRootfs\": false,\n                    \"RestartPolicy\": {\n                        \"MaximumRetryCount\": 0,\n                        \"Name\": \"unless-stopped\"\n                    },\n                    \"Runtime\": \"runc\",\n                    \"SecurityOpt\": null,\n                    \"ShmSize\": 67108864,\n                    \"UTSMode\": \"\",\n                    \"Ulimits\": null,\n                    \"UsernsMode\": \"\",\n                    \"VolumeDriver\": \"\",\n                    \"VolumesFrom\": null\n                },\n                \"HostnamePath\": \"/volume1/@docker/containers/c7244062cf6e45cf20d37ec606ea2af86880bd57013625a4059cdd9c173db2fb/hostname\",\n                \"HostsPath\": \"/volume1/@docker/containers/c7244062cf6e45cf20d37ec606ea2af86880bd57013625a4059cdd9c173db2fb/hosts\",\n                \"Id\": \"c7244062cf6e45cf20d37ec606ea2af86880bd57013625a4059cdd9c173db2fb\",\n                \"Image\": \"sha256:5711e63eb8de0264bb81c3a046bb5172c543965530479d1cde9d5d9c1b170365\",\n                \"LogPath\": \"/volume1/@docker/containers/c7244062cf6e45cf20d37ec606ea2af86880bd57013625a4059cdd9c173db2fb/log.db\",\n                \"MountLabel\": \"\",\n                \"Mounts\": [\n                    {\n                        \"Destination\": \"/app/config\",\n                        \"Mode\": \"rw\",\n                        \"Propagation\": \"rprivate\",\n                        \"RW\": true,\n                        \"Source\": \"/volume1/docker/glance/config\",\n                        \"Type\": \"bind\"\n                    }\n                ],\n                \"Name\": \"/glance\",\n                \"NetworkSettings\": {\n                    \"Bridge\": \"\",\n                    \"EndpointID\": \"\",\n                    \"Gateway\": \"\",\n                    \"GlobalIPv6Address\": \"\",\n                    \"GlobalIPv6PrefixLen\": 0,\n                    \"HairpinMode\": false,\n                    \"IPAddress\": \"\",\n                    \"IPPrefixLen\": 0,\n                    \"IPv6Gateway\": \"\",\n                    \"LinkLocalIPv6Address\": \"\",\n                    \"LinkLocalIPv6PrefixLen\": 0,\n                    \"MacAddress\": \"\",\n                    \"Networks\": {\n                        \"glance_default\": {\n                            \"Aliases\": [\n                                \"glance\",\n                                \"glance\",\n                                \"c7244062cf6e\"\n                            ],\n                            \"DriverOpts\": null,\n                            \"EndpointID\": \"5e1a876a21c0e89f46880ce014adf47923c41596b40d6d94940507c2099fc05d\",\n                            \"Gateway\": \"192.168.96.1\",\n                            \"GlobalIPv6Address\": \"\",\n                            \"GlobalIPv6PrefixLen\": 0,\n                            \"IPAMConfig\": null,\n                            \"IPAddress\": \"192.168.96.2\",\n                            \"IPPrefixLen\": 20,\n                            \"IPv6Gateway\": \"\",\n                            \"Links\": null,\n                            \"MacAddress\": \"02:42:c0:a8:60:02\",\n                            \"NetworkID\": \"0227730fe5deefc1ef168e7a8493d380bbf0731818e41a74f9dfd5f4a637dfda\"\n                        }\n                    },\n                    \"Ports\": {\n                        \"8080/tcp\": null\n                    },\n                    \"SandboxID\": \"28fd03c7364bc4d1ea730d3b1929f1c5147a5a6fdb2754f006dd9331064725b6\",\n                    \"SandboxKey\": \"/var/run/docker/netns/28fd03c7364b\",\n                    \"SecondaryIPAddresses\": null,\n                    \"SecondaryIPv6Addresses\": null\n                },\n                \"Path\": \"/app/glance\",\n                \"Platform\": \"linux\",\n                \"ProcessLabel\": \"\",\n                \"ResolvConfPath\": \"/volume1/@docker/containers/c7244062cf6e45cf20d37ec606ea2af86880bd57013625a4059cdd9c173db2fb/resolv.conf\",\n                \"RestartCount\": 0,\n                \"State\": {\n                    \"Dead\": false,\n                    \"Error\": \"\",\n                    \"ExitCode\": 0,\n                    \"FinishedAt\": \"2025-06-26T08:29:06.528013939Z\",\n                    \"Health\": {\n                        \"FailingStreak\": 0,\n                        \"Log\": [\n                            {\n                                \"End\": \"2025-06-26T20:32:15.212245423+07:00\",\n                                \"ExitCode\": 0,\n                                \"Output\": \"\",\n                                \"Start\": \"2025-06-26T20:32:15.039683939+07:00\"\n                            },\n                            {\n                                \"End\": \"2025-06-26T20:33:15.717950368+07:00\",\n                                \"ExitCode\": 0,\n                                \"Output\": \"\",\n                                \"Start\": \"2025-06-26T20:33:15.519516729+07:00\"\n                            },\n                            {\n                                \"End\": \"2025-06-26T20:34:16.221254256+07:00\",\n                                \"ExitCode\": 0,\n                                \"Output\": \"\",\n                                \"Start\": \"2025-06-26T20:34:16.01495317+07:00\"\n                            },\n                            {\n                                \"End\": \"2025-06-26T20:35:16.729263534+07:00\",\n                                \"ExitCode\": 0,\n                                \"Output\": \"\",\n                                \"Start\": \"2025-06-26T20:35:16.635504506+07:00\"\n                            },\n                            {\n                                \"End\": \"2025-06-26T20:36:17.24047317+07:00\",\n                                \"ExitCode\": 0,\n                                \"Output\": \"\",\n                                \"Start\": \"2025-06-26T20:36:17.189861215+07:00\"\n                            }\n                        ],\n                        \"Status\": \"healthy\"\n                    },\n                    \"OOMKilled\": false,\n                    \"Paused\": false,\n                    \"Pid\": 9418,\n                    \"Restarting\": false,\n                    \"Running\": true,\n                    \"StartedAt\": \"2025-06-26T08:29:13.978263274Z\",\n                    \"Status\": \"running\"\n                }\n            }\n        ],\n        \"content\": \"docker-compose.yaml content of file\",\n        \"created_at\": \"2025-05-27T08:33:03.213407Z\",\n        \"enable_service_portal\": false,\n        \"id\": \"3c091e8b-f68f-4161-97a3-fc3db3f4bdc9\",\n        \"is_package\": false,\n        \"name\": \"glance\",\n        \"path\": \"/volume1/docker/glance\",\n        \"service_portal_name\": \"\",\n        \"service_portal_port\": 0,\n        \"service_portal_protocol\": \"\",\n        \"services\": [],\n        \"share_path\": \"/docker/glance\",\n        \"state\": \"\",\n        \"status\": \"RUNNING\",\n        \"updated_at\": \"2025-06-26T08:29:06.212088Z\",\n        \"version\": 2\n    },\n    \"success\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "network",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-SYNO-TOKEN",
+										"value": "{{SYNO_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "api",
+											"value": "SYNO.Docker.Network",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "list",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Network",
+									"host": [
+										"{{SYNO_URL}}"
+									],
+									"path": [
+										"webapi",
+										"entry.cgi",
+										"SYNO.Docker.Network"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "list",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-SYNO-TOKEN",
+												"value": "{{SYNO_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "api",
+													"value": "SYNO.Docker.Network",
+													"type": "text"
+												},
+												{
+													"key": "method",
+													"value": "list",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Network",
+											"host": [
+												"{{SYNO_URL}}"
+											],
+											"path": [
+												"webapi",
+												"entry.cgi",
+												"SYNO.Docker.Network"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 26 Jun 2025 15:36:09 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=\"UTF-8\""
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=20"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, no-cache, no-store, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15768000; includeSubdomains; preload"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date"
+										}
+									],
+									"body": "{\n    \"data\": {\n        \"network\": [\n            {\n                \"containers\": [\n                    \"glance\"\n                ],\n                \"driver\": \"bridge\",\n                \"enable_ipv6\": false,\n                \"gateway\": \"192.168.96.1\",\n                \"id\": \"0227730fe5deefc1ef168e7a8493d380bbf0731818e41a74f9dfd5f4a637dfda\",\n                \"iprange\": \"\",\n                \"name\": \"glance_default\",\n                \"subnet\": \"192.168.96.0/20\"\n            }\n        ]\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-SYNO-TOKEN",
+										"value": "{{SYNO_TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "api",
+											"value": "SYNO.Docker.Network",
+											"type": "text"
+										},
+										{
+											"key": "method",
+											"value": "create",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "\"test2\"",
+											"description": "mandatory: Network name",
+											"type": "text"
+										},
+										{
+											"key": "subnet",
+											"value": "\"10.0.0.5/16\"",
+											"description": "optional: IPv4 subnet",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "iprange",
+											"value": "\"10.0.0.5/16\"",
+											"description": "optional: IPv4 iprange",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gateway",
+											"value": "\"10.0.0.1\"",
+											"description": "optional: IPv4 gateway",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "disable_masquerade",
+											"value": "false",
+											"description": "mandatory: Disable IP Masquerade (default: false)",
+											"type": "text"
+										},
+										{
+											"key": "enable_ipv6",
+											"value": "false",
+											"description": "optional: IPv6 enable (default: false)",
+											"type": "text"
+										},
+										{
+											"key": "ipv6_subnet",
+											"value": "\"2001:db8:abcd:0012::/64\"",
+											"description": "optional: IPv6 subnet",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ipv6_iprange",
+											"value": "\"2001:db8:abcd:12::1/64\"",
+											"description": "optional: IPv6 iprange",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ipv6_gateway",
+											"value": "\"2001:db8:abcd:12:ffff:ffff:ffff:ffff\"",
+											"description": "optional: IPv6 gateway",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Network",
+									"host": [
+										"{{SYNO_URL}}"
+									],
+									"path": [
+										"webapi",
+										"entry.cgi",
+										"SYNO.Docker.Network"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-SYNO-TOKEN",
+												"value": "{{SYNO_TOKEN}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "api",
+													"value": "SYNO.Docker.Network",
+													"type": "text"
+												},
+												{
+													"key": "method",
+													"value": "create",
+													"type": "text"
+												},
+												{
+													"key": "version",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "\"test2\"",
+													"description": "mandatory: Network name",
+													"type": "text"
+												},
+												{
+													"key": "subnet",
+													"value": "\"10.0.0.5/16\"",
+													"description": "optional: IPv4 subnet",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "iprange",
+													"value": "\"10.0.0.5/16\"",
+													"description": "optional: IPv4 iprange",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "gateway",
+													"value": "\"10.0.0.1\"",
+													"description": "optional: IPv4 gateway",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "disable_masquerade",
+													"value": "false",
+													"description": "mandatory: Disable IP Masquerade (default: false)",
+													"type": "text"
+												},
+												{
+													"key": "enable_ipv6",
+													"value": "false",
+													"description": "optional: IPv6 enable (default: false)",
+													"type": "text"
+												},
+												{
+													"key": "ipv6_subnet",
+													"value": "\"2001:db8:abcd:0012::/64\"",
+													"description": "optional: IPv6 subnet",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "ipv6_iprange",
+													"value": "\"2001:db8:abcd:12::1/64\"",
+													"description": "optional: IPv6 iprange",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "ipv6_gateway",
+													"value": "\"2001:db8:abcd:12:ffff:ffff:ffff:ffff\"",
+													"description": "optional: IPv6 gateway",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{SYNO_URL}}/webapi/entry.cgi/SYNO.Docker.Network",
+											"host": [
+												"{{SYNO_URL}}"
+											],
+											"path": [
+												"webapi",
+												"entry.cgi",
+												"SYNO.Docker.Network"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 26 Jun 2025 15:57:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=\"UTF-8\""
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=20"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "id=BNyv0t1Fw7Nl0P8wjQXVf_TH4yfUvJmcO4mdKUDg_oErLlTUhLx-zpIsvnSpAJNz7lyrN1RlFy8NLTlVsJwIyA;expires=Thu, 03-Jul-2025 15:57:33 GMT;max-age=604800;path=/;HttpOnly"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, no-cache, no-store, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15768000; includeSubdomains; preload"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
 								}
 							]
 						}
