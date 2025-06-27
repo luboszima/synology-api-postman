@@ -76,3 +76,62 @@ Export the event logs in HTML or CSV format.
   "SynoToken": "{{SYNO_TOKEN}}"
 }
 ```
+
+### SYNO.Docker.Network
+
+This API provides access to the network management of Container Manager. You can create, delete, and manage networks for your containers.
+
+#### list
+
+List of networks.
+
+- Request method: POST
+- Request Body query parameters:
+
+```json 
+{
+  "api": "SYNO.Docker.Network",
+  "method": "list",
+  "version": "1"
+}
+```
+
+#### create
+
+Create a new network.
+
+- Request method: POST
+- Request Body query parameters:
+
+```json 
+{
+  "api": "SYNO.Docker.Network",
+  "method": "create",
+  "version": "1",
+  "name": "\"test2\"",
+  "subnet": "\"10.0.0.5/16\"",
+  "iprange": "\"10.0.0.5/16\"",
+  "gateway": "\"10.0.0.1\"",
+  "disable_masquerade": "false",
+  "enable_ipv6": "false",
+  "ipv6_subnet": "\"2001:db8:abcd:0012::/64\"",
+  "ipv6_iprange": "\"2001:db8:abcd:12::1/64\"",
+  "ipv6_gateway": "\"2001:db8:abcd:12:ffff:ffff:ffff:ffff\""
+}
+```
+
+Mandatory parameters:
+- api
+- method
+- version
+- name - Name of the network
+- disable_masquerade - Disable IP Masquerade (default: false)
+
+Optional parameters:
+- subnet - IPv4 subnet in CIDR notation (e.g.,if not set, it will be generated automatically)
+- iprange - IPv4 IP range in CIDR notation (e.g.,if not set, it will be generated automatically)
+- gateway - IPv4 gateway address (e.g., if not set, it will be generated automatically)
+- enable_ipv6 - Enable IPv6 support (default: false)
+- ipv6_subnet - IPv6 subnet in CIDR notation (e.g., 2001:db8:abcd:0012::/64)
+- ipv6_iprange - IPv6 IP range in CIDR notation (e.g., 2001:db8:abcd:12::1/64)
+- ipv6_gateway - IPv6 gateway address (e.g., 2001:db8:abcd:12:ffff:ffff:ffff:ffff)
