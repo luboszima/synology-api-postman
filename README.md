@@ -135,3 +135,38 @@ Optional parameters:
 - ipv6_subnet - IPv6 subnet in CIDR notation (e.g., 2001:db8:abcd:0012::/64)
 - ipv6_iprange - IPv6 IP range in CIDR notation (e.g., 2001:db8:abcd:12::1/64)
 - ipv6_gateway - IPv6 gateway address (e.g., 2001:db8:abcd:12:ffff:ffff:ffff:ffff)
+
+### SYNO.Docker.Project
+
+This API provides access to the project management of Container Manager. You can create, delete, and manage projects for your containers.
+
+#### list
+
+List of networks.
+
+- Request method: POST
+- Request Body query parameters:
+
+```json 
+{
+  "api": "SYNO.Docker.Project",
+  "method": "list",
+  "version": "1"
+}
+```
+
+#### get
+
+Get project details.
+
+- Request method: POST
+- Request Body query parameters:
+
+```json 
+{
+  "api": "SYNO.Docker.Project",
+  "method": "get",
+  "version": "1",
+  "id": "id-of-project"
+}
+```
